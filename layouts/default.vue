@@ -1,13 +1,30 @@
 <template>
   <div>
-    <nuxt />
+    <b-navbar toggleable="lg" type="dark" variant="info">
+      <b-navbar-brand href="/">人のプール</b-navbar-brand>
+
+      <b-navbar-toggle target="nav_collapse"/>
+
+      <b-collapse is-nav id="nav_collapse">
+        <b-navbar-nav>
+          <b-nav-item href="/">Top</b-nav-item>
+          <b-nav-item href="start">Get Started</b-nav-item>
+          <b-nav-item href="status">Pool Status</b-nav-item>
+          <b-nav-item href="workers">Workers</b-nav-item>
+          <b-nav-item href="api">API</b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
+    <div class="container-fluid">
+      <nuxt/>
+    </div>
   </div>
 </template>
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
