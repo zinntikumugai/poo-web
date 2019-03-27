@@ -8,12 +8,15 @@ export const state = () => {
 }
 
 export const mutations = {
-
-}
-
-export const actions = {
     async get({ commit }) {
         datas.payment = await this.$axios.$get("https://mining.zinntikumugai.xyz/api/payments")
         datas.status = await  this.$axios.$get("https://mining.zinntikumugai.xyz/api/stats")
+        commit()
+    }
+}
+
+export const actions = {
+    getdata(state) {
+        return state.datas
     }
 }

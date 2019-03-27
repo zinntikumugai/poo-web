@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div>
-      <logo />
+      <p>{{datas}}</p>
       <h1 class="title">
         pool-web
       </h1>
@@ -25,11 +25,16 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import { mapGetters } from "vuex";
 
 export default {
   components: {
-    Logo
+  },
+  created: function() {
+    this.$store.dispatch("get")
+  },
+  computed: {
+    ...mapGetters({ datas: "getdata" })
   }
 }
 </script>
