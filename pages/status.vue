@@ -5,7 +5,7 @@
     <div class="row">
       <b-card title="Mining Status" bg-variant="light" class="col-md">
         <b-card-text>
-          <b-table striped fixed hover responsive footClone :items="mining" :fields="miningFields">
+          <b-table striped hover responsive footClone :items="mining" :fields="miningFields">
             <template slot="luck" slot-scope="data">{{luckFormat(data.item.luck)}}</template>
             <template slot="hash" slot-scope="data">{{hashFormat(data.item.hash)}}</template>
           </b-table>
@@ -13,7 +13,7 @@
       </b-card>
       <b-card title="Network Status" bg-variant="light" class="col-md">
         <b-card-text>
-          <b-table striped fixed hover responsive footClone :items="network">
+          <b-table striped hover responsive footClone :items="network">
             <template slot="hash" slot-scope="data">{{hashFormat(data.item.hash)}}</template>
           </b-table>
         </b-card-text>
